@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klay.Dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.klay.Bean.Permission">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="discription" jdbcType="VARCHAR" property="discription" />
+        <result column="roleId" jdbcType="VARCHAR" property="roleId" />
+    </resultMap>
+
+    <insert id="addPerms" parameterType="com.klay.Bean.Permission">
+        insert into user (id,name,roleId)
+        values (#{id},#{name},#{roleId})
+    </insert>
+
+    <select id="getPerms" resultType="Permission">
+        select
+        id,name,discription,roleId
+        from permission
+    </select>
+
+</mapper>

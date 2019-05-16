@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size:14px;
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color:transparent;
+    background:url("../img/congruent_pentagon.png") center center;
+    background-size: cover;
+}
+.main{
+    min-height:100%;
+    height: auto;
+}
+.header{
+    height:60px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+.content-header{
+    width:80%;
+    max-width: 1024px;
+    height:100%;
+    padding:10px 0;
+    margin:0 auto
+}
+.header  .header-right{
+    float: right;
+    margin-top:10px;
+}
+.header  .header-right a{
+    position: relative;
+    padding: 4px 6px;
+    margin: 0 4px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.main-con{
+    background-color: #fff;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.lg-gorm{
+    width: 100%;
+    max-width: 350px;
+    height:400px;
+    margin-top: 0%;
+    padding-bottom: 30px;
+    float: right;
+    background: rgba(213, 223, 255, 0.9);
+}
+.lg-gorm h3{
+    position: relative;
+    width:100px;
+    margin:0 auto;
+    padding-top: 10%;
+    padding-bottom: 8%;
+    font-size: 20px;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+}
+.lg-gorm h3:after{
+    position: absolute;
+    height: 2px;
+    left: -2px;
+    right: -2px;
+    background: #2e7eed;
+    bottom: 16px;
+}
+.lg-input{
+    position: relative;
+    width: 75%;
+    margin: 10px auto;
+    padding-left: 28px;
+    border: 1px solid rgb(82, 234, 237);
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 8%;
+}
+.lg-input input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px 10px;
+    color: #333;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.lg-input label{
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    color: rgb(154, 237, 165);
+}
+.lg-input input:focus{
+    outline: none;
+}
+.lg-submit{
+    width: 75%;
+    margin: 10px auto;
+    margin-bottom: 16px;
+}
+.lg-submit input{
+    width: 100%;
+    height: 40px;
+    color: #9dd2ff;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    cursor: pointer;
+    background-color: rgb(130, 190, 237);
+    box-shadow: 0px 3px 10px 0px rgba(46, 134, 237, 0.35);
+}
+.lg-submit input:hover{
+    background-color: rgb(237, 151, 189);
+    transition: all ease-in-out .15s;
+}
+.lg-submit input:focus{
+    outline: none;
+    text-decoration: none;
+}
+@media screen and (max-width: 1366px){
+    .lg-gorm{
+        height: 84%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .left img{
+        margin-top: 24%;
+    }
+}
+@media screen and (max-width: 768px){
+    .lg-gorm{
+        width: 100%;
+        height: 60%;
+        margin-top: 18%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: #b0b0b0 !important;
+    -webkit-text-fill-color: #b0b0b0;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {  /* WebKit browsers */ color: #b0b0b0; } input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #b0b0b0; } input::-moz-placeholder, textarea::-moz-placeholder {  /* Mozilla Firefox 19+ */ color: #b0b0b0; } input:-ms-input-placeholder, textarea:-ms-input-placeholder {  /* Internet Explorer 10+ */ color: #b0b0b0; }

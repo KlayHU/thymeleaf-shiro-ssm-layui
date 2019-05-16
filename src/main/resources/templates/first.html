@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>springboot-mybatis-shiro框架整合后台管理系统</title>
+    <link th:href="@{/layui/css/layui.css}" rel="stylesheet" />
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">后台管理平台</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item">
+                <a href="">用户管理</a></li>
+            <li class="layui-nav-item">
+                <a href="">角色管理</a></li>
+            <li class="layui-nav-item">
+                <a href="">权限管理</a></li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item"><a href=""> 欢迎！ </a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="">基本资料</a>
+                    </dd>
+                </dl></li>
+            <li class="layui-nav-item"><a href="">注销</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item"><a href="javascript:;" th:href="${'/user/list'}" target="main">用户操作</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" th:href="${'/role/list'}" target="main">角色操作</a></li>
+                <li class="layui-nav-item"><a href="javascript:;">权限操作</a></li>
+               </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+                <iframe src="https://www.alibabagroup.com/cn/global/home" frameborder="0" scrolling="yes" name="main" id="main" height="100%" width="100%" ></iframe>
+</div>
+    <div class="layui-footer">
+        <div th:text="西安邮电大学-智能感知与信息处理实验室"/>
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    //JavaScript代码区域
+    layui.use(['element','jquery'],function() {
+        var element = layui.element;
+        var $=layui.jquery;
+        //定义一个事件，导航栏右侧
+        $("a").click(function () {
+            var url=$(this).data("url");
+                    $("#option").load(url);
+            })
+
+        });
+
+</script>
+</body>
+</html>

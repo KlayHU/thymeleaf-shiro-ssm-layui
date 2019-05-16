@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klay.Dao.RoleMapper">
+    <resultMap id="BaseResultMap" type="com.klay.Bean.Role">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="userId" jdbcType="VARCHAR" property="userId" />
+    </resultMap>
+
+    <insert id="addRole" parameterType="com.klay.Bean.Role">
+    insert into role (id,name,userId)
+    value (#{id},#{name},#{userId})
+    </insert>
+
+    <select id="getRoles" resultType="Role">
+        select
+        id,name,userId,discription
+        from role
+    </select>
+</mapper>

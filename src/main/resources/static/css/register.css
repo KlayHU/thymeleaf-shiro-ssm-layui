@@ -1,0 +1,32 @@
+.register-input-icon i{
+    position: absolute;
+    left: 9px;
+    top: 10px;
+    color: #c5c5c5;
+}
+.register-input-icon input{
+    padding-left: 30px;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 1017490 */
+    src: url('//at.alicdn.com/t/font_1017490_evioyl47qy9.eot');
+    src: url('//at.alicdn.com/t/font_1017490_evioyl47qy9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1017490_evioyl47qy9.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1017490_evioyl47qy9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1017490_evioyl47qy9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1017490_evioyl47qy9.svg#iconfont') format('svg');
+}
+
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+    content: "\e769";
+}
